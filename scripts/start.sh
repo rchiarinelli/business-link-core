@@ -1,2 +1,2 @@
 ls -l /var/app
-docker-compose -f /var/app/docker-compose.yaml up -d
+sudo docker-compose -f /var/app/docker-compose.yaml up -d
