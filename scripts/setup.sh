@@ -1,1 +1,2 @@
-systemctl restart docker
+service docker stop
+service docker start
