@@ -15,7 +15,7 @@ services:
   businesslinkcore:
     image: 'rchiarinelli/businesslink-core:latest'
     ports:
-      - 8020:8020
+      - 80:8020
     restart: unless-stopped
     depends_on:
       - db
