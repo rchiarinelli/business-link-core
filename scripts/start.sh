@@ -1,9 +1,3 @@
-echo  installing docker compose
-pip install docker-compose --ignore-installed
-echo  restarting docker services
-systemctl start docker
-systemctl enable docker
-systemctl restart docker
 echo  Docker version
 docker version
 echo  Docker-compose version
