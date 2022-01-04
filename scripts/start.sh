@@ -1,3 +1,6 @@
+systemctl start docker
+systemctl enable docker
+systemctl restart docker
 echo Docker version
 docker version
 echo Docker-compose version
