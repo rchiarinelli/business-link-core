@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
 
   businesslinkcore:
-    image: 'rchiarinelli/businesslink-core:0.1'
+    image: 'rchiarinelli/businesslink-core:latest'
     ports:
       - 8020:8020
     restart: unless-stopped
