@@ -5,7 +5,7 @@ files:
     destination: /var/app
 hooks:
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: scripts/start.sh 
       timeout: 300
       runas: root
   ApplicationStop:

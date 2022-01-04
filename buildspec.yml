@@ -7,12 +7,15 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Docker Hub
-      - docker login -u rchiarinelli -p t68Rd14-A
+      - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
   build:
     commands:
-      - echo Building application
-      - mvn clean install
+      - echo Preparing docker-compose file
+      - sed -i 's/BUSINESS_LINK_DB/new/$BUSINESS_LINK_DB' docker-compose.yaml
+      - sed -i 's/BUSINESS_LINK_DB_USERNAME/new/$BUSINESS_LINK_DB_USERNAME' docker-compose.yaml
+      - sed -i 's/BUSINESS_LINK_DB_PASSWORD/new/$BUSINESS_LINK_DB_PASSWORD' docker-compose.yaml
       - echo Build started on `date`
+      - mvn clean install
       - echo Building the Docker image...
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $IMAGE_REPO_NAME:$IMAGE_TAG

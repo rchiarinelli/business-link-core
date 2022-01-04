@@ -5,3 +5,7 @@ services:
     ports:
       - 8020:8020
     restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: BUSINESS_LINK_DB
+      SPRING_DATASOURCE_USER_NAME: BUSINESS_LINK_DB_USERNAME
+      SPRING_DATASOURCE_PASSWORD: BUSINESS_LINK_DB_PASSWORD
