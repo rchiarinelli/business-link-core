@@ -1,4 +1,7 @@
+#!/bin/sh
+echo Installing docker-compose
 pip install docker-compose --ignore-installed
+echo restarting docker services
 systemctl start docker
 systemctl enable docker
 systemctl restart docker
