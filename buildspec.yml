@@ -11,9 +11,9 @@ phases:
   build:
     commands:
       - echo Preparing docker-compose file
-      - sed -i 's/BUSINESS_LINK_DB/new/$BUSINESS_LINK_DB' docker-compose.yaml
-      - sed -i 's/BUSINESS_LINK_DB_USERNAME/new/$BUSINESS_LINK_DB_USERNAME' docker-compose.yaml
-      - sed -i 's/BUSINESS_LINK_DB_PASSWORD/new/$BUSINESS_LINK_DB_PASSWORD' docker-compose.yaml
+      - sed -i 's/BUSINESS_LINK_DB/$BUSINESS_LINK_DB/g' docker-compose.yaml
+      - sed -i 's/BUSINESS_LINK_DB_USERNAME/$BUSINESS_LINK_DB_USERNAME/g' docker-compose.yaml
+      - sed -i 's/BUSINESS_LINK_DB_PASSWORD/$BUSINESS_LINK_DB_PASSWORD/g' docker-compose.yaml
       - echo Build started on `date`
       - mvn clean install
       - echo Building the Docker image...
