@@ -40,7 +40,7 @@ public class BusinessLink implements Serializable {
 	@Column(nullable = false)
 	private Date issued;
 
-	@Column(nullable = false, length = 100)
+	@Column(nullable = false, length = 500)
 	private String linkKey;
 
 	@Column(nullable = false)
@@ -48,5 +48,9 @@ public class BusinessLink implements Serializable {
 
 	@Column(nullable = false)
 	private Date expiration;
+	
+	@Column(nullable = true, length = 100)
+	private String linkName;
+	
 
 }
